@@ -6,6 +6,6 @@ if __name__ == "__main__":
     argsum = 0
 
     if arglen > 1:
-        for i in range(1, arglen)
-        argsum += int(argnum[i])
+        for i in range(1, arglen):
+            argsum += int(argnum[i])
     print(argsum)
