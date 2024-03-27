@@ -4,7 +4,7 @@ if __name__ == "__main__":
     args = sys.argv
     argnum = len(args) - 1
 
-    print(f"{argnum}", end="")
+    print(f"{argnum}", end=" ")
     if argnum == 0:
         print("arguments.")
     elif argnum == 1:
