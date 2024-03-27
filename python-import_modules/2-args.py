@@ -4,13 +4,13 @@ if __name__ == "__main__":
     argnum = sys.argv
     arglen = len(argnum) - 1
 
-    print("{}".format(arglen), end=" ")
-    if arglen == 0:
-        print("arguments.")
+    if arglen > 1:
+        print(arglen, "arguments:")
+        for i in range(1, arglen + 1):
+            print("{}: {}".format(i, argnum[i]))
     elif arglen == 1:
-        print("argument:")
+        print(arglen, "argument:")
+        for i in range(1, arglen + 1):
+            print("{}: {}".format(i, argnum[i]))
     else:
-        print("arguments:")
-
-    for i in range(arglen):
-        print("{}: {}".format(i + 1, argnum[i + 1]))
+        print(arglen, "arguments.")
