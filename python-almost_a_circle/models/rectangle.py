@@ -55,7 +55,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-     @property
+    @property
     def y(self):
         """getter for y property"""
         return self.__y
