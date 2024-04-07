@@ -86,3 +86,24 @@ class Rectangle(Base):
         """return __str__ and print() representation of a Rectangle"""
         return '[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """updates rectangle values"""
+        if args and len(args) != 0:
+            pos = 0
+            for arg in args:
+                if pos == 0:
+                    self.id = arg
+                elif pos == 1:
+                    self.width = arg
+                elif pos == 2:
+                    self.height = arg
+                elif pos == 3:
+                    self.x = arg
+                elif pos == 4:
+                    self.y = arg
+                pos += 1
+
+        elif len(kwargs) != 0:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
