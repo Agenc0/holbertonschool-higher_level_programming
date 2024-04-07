@@ -16,6 +16,6 @@ class Student():
                     for key in attrs if hasattr(self, key)}
         return self.__dict__
 
-     def reload_from_json(self, json):
-        for attr, val in json.items():
-            setattr(self, attr, val)
+    def reload_from_json(self, json):
+        for i, j in json.items():
+            setattr(self, i, j)
