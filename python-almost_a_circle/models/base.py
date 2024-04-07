@@ -48,3 +48,13 @@ class Base:
 
             dummy.update(**dictionary)
             return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                dict_objects = Base.from_json_string(f.read())
+                return [cls.create(**d) for d in dict_objects]
+        except IOError:
+            return []
